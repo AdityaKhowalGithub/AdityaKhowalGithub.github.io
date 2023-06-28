@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - gh-pagesssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""  # Set a branch name to trigger deployment
+      - gh-pages  # Set a branch name to trigger deployment
   pull_request:
 
 jobs:
