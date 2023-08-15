@@ -463,11 +463,15 @@ NAVBAR
   width: 35px;
 }
 .pdf {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-
-  
-  border: none;
+  height: 100%;
 }
+
 .navbar-b.navbar-trans .nav-link:before {
   background-color: #fff;
 }
@@ -1052,3 +1056,20 @@ BUTTON
     bottom: 15px;
   }
 }
+
+
+.fade-out {
+  position: relative;
+}
+
+.fade-out::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  /* */
+}
+
+

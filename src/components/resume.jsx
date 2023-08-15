@@ -1,30 +1,53 @@
 
-import React, { useEffect } from 'react'
-import pdfURL from '../img/ResumeMarch5.pdf';
-import Navbar from './navbar';
-const PDFViewer = () => {
-    useEffect(() => {
-        document.body.classList.add('resume-page');
+// import React, { useEffect } from 'react'
+// import pdfURL from './PDF/Aditya_khowal_resume.pdf';
 
-        return () => {
-            document.body.classList.remove('resume-page');
-        };
-    }, []);
-    return (
+// const Resume = () => {
+//     useEffect(() => {
+//         document.body.classList.add('resume-page');
 
-        // import navbar before iframe
-        <>
-            <Navbar />
-            <div>
+//         return () => {
+//             document.body.classList.remove('resume-page');
+//         };
+//     }, []);
+//     return (
+
+//             <div>
+//                 <iframe
+//                     src={`${pdfURL}#toolbar=0`}
+//                     className="pdf"
+//                     title="Resume PDF"
+//                 />
+//             </div>
+//     );
+// };
+
+
+// export default Resume;
+
+import React from 'react';
+import pdfURL from './PDF/Aditya_khowal_resume.pdf';
+
+class Resume extends React.Component {
+    // componentDidMount() {
+    //     document.body.classList.add('resume-page');
+    // }
+
+    // componentWillUnmount() {
+    //     document.body.classList.remove('resume-page');
+    // }
+
+    render() {
+        return (
+            <div className='pp'>
                 <iframe
-                    src={`${pdfURL}#toolbar=0`}
+                    src={`${pdfURL}#view=Fit_to_page`}
                     className="pdf"
                     title="Resume PDF"
                 />
             </div>
-        </>
-    );
-};
+        );
+    }
+}
 
-
-export default PDFViewer;
+export default Resume;
