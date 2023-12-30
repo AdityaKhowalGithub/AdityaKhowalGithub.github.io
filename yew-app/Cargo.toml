@@ -3,10 +3,9 @@ name = "yew-app"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-crate-type = ["cdylib"]
+
 
 
 [dependencies]
-yew= "0.19"
-yew-router = "0.15"
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+yew-router = { git = "https://github.com/yewstack/yew.git" }

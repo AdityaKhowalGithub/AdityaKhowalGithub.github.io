@@ -4,7 +4,7 @@ use yew::prelude::*;
 
 pub struct Contact;
 
-pub impl Component for Contact {
+impl Component for Contact {
     type Message = ();
     type Properties = ();
 
