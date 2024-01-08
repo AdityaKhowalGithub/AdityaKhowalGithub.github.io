@@ -1,9 +1,10 @@
 // src/components/navbar.rs
 
 use yew::prelude::*;
-use yew_router::prelude::*;
+// use yew_router::prelude::*;
 
-use crate::Route; // Import your Route enum
+// //import enum from
+// use crate::Route;
 
 pub struct Navbar;
 
@@ -18,13 +19,16 @@ impl Component for Navbar {
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <nav class="navbar">
-                <Link<Route> to={Route::Home}>{"Home"}</Link<Route>>
-                <Link<Route> to={Route::About}>{"About"}</Link<Route>>
-                <Link<Route> to={Route::Contact}>{"Contact"}</Link<Route>>
-                <Link<Route> to={Route::Experience}>{"Experience"}</Link<Route>>
-                <Link<Route> to={Route::Projects}>{"Projects"}</Link<Route>>
-                // Add more navigation links here
-            </nav>
+        <div class="navbar-brand">{"My App"}</div>
+        <div class="navbar-menu">
+            <a class="navbar-item" href="/">{"Home"}</a>
+            <a class="navbar-item" href="/about">{"About"}</a>
+            <a class="navbar-item" href="/contact">{"Contact"}</a>
+            <a class="navbar-item" href="/experience">{"Experience"}</a>
+            <a class="navbar-item" href="/projects">{"Projects"}</a>
+        </div>
+    </nav>
+        
         }
     }
 }
